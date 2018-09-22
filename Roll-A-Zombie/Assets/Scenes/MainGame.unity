@@ -118,7 +118,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1000013466240844, guid: e74b56ca326704bd19eabbb585d06ba2,
     type: 2}
   m_PrefabInternal: {fileID: 1509927889}
---- !u!65 &203742073
+--- !u!65 &203742076
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -182,6 +182,7 @@ GameObject:
   - component: {fileID: 459295705}
   - component: {fileID: 459295704}
   - component: {fileID: 459295703}
+  - component: {fileID: 459295706}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -249,6 +250,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &459295706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 459295702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b42d8cf04fe5148b18830eb4c139eb7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectedZombiePosition: 0
+  selectedZombie: {fileID: 482358284}
+  zombies:
+  - {fileID: 482358284}
+  - {fileID: 1285937729}
+  - {fileID: 1371466623}
+  - {fileID: 1243144392}
+  selectedSize: {x: 1.45, y: 1.45, z: 1.45}
+  defaultSize: {x: 1, y: 1, z: 1}
 --- !u!1 &482358284 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1000011233038864, guid: d29d2fcf46c754d6a92fc7c19b2d7b3e,
@@ -286,7 +307,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1000010274634484, guid: e74b56ca326704bd19eabbb585d06ba2,
     type: 2}
   m_PrefabInternal: {fileID: 1509927889}
---- !u!65 &530839204
+--- !u!65 &530839207
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -345,7 +366,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1000011608434088, guid: e74b56ca326704bd19eabbb585d06ba2,
     type: 2}
   m_PrefabInternal: {fileID: 1509927889}
---- !u!65 &1110401635
+--- !u!65 &1110401638
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -679,7 +700,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1000010312657222, guid: e74b56ca326704bd19eabbb585d06ba2,
     type: 2}
   m_PrefabInternal: {fileID: 1509927889}
---- !u!65 &2012665606
+--- !u!65 &2012665609
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
