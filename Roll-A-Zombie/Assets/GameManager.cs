@@ -15,11 +15,14 @@ public class GameManager : MonoBehaviour {
 	}
 
 	void Update() {
-		if(Input.GetKeyDown("left")) {
+		if(Input.GetKeyDown(KeyCode.LeftArrow)) {
 			ShiftLeft();
 		}
-		if(Input.GetKeyDown("right")) {
+		if(Input.GetKeyDown(KeyCode.RightArrow)) {
 			ShiftRight();
+		}
+		if(Input.GetKeyDown(KeyCode.UpArrow)) {
+			PushUp();
 		}
 	}
 
@@ -37,6 +40,11 @@ public class GameManager : MonoBehaviour {
 		} else {
 			SelectZombie(zombies[selectedZombiePosition + 1], selectedZombiePosition + 1);
 		}
+	}
+
+	void PushUp() {
+		Rigidbody rb = selectedZombie.GetComponent<Rigidbody>();
+		rb.AddForce(0, 0, 10, ForceMode.Impulse);
 	}
 
 	void SelectZombie(GameObject newZombie, int newPosition) {
