@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour {
 
@@ -9,9 +10,13 @@ public class GameManager : MonoBehaviour {
 	public List<GameObject> zombies;
 	public Vector3 selectedSize;
 	public Vector3 defaultSize;
+    public Text text;
+    int score;
 
 	void Start() {
 		SelectZombie(zombies[0], 0);
+        score = 0;
+        text.text = "Score: " + score;
 	}
 
 	void Update() {
@@ -43,6 +48,7 @@ public class GameManager : MonoBehaviour {
 	}
 
 	void PushUp() {
+        AddScore();
 		Rigidbody rb = selectedZombie.GetComponent<Rigidbody>();
 		rb.AddForce(0, 0, 10, ForceMode.Impulse);
 	}
@@ -53,4 +59,9 @@ public class GameManager : MonoBehaviour {
 		selectedZombie.transform.localScale = selectedSize;
 		selectedZombiePosition = newPosition;
 	}
+
+    void AddScore() {
+        score += 1;
+        text.text = "Score: " + score;
+    }
 }
